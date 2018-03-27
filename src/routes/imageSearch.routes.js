@@ -6,11 +6,11 @@ var routes = function (app) {
   })
   app.get("/imagesearch/:input", function (req, res) {
     ImageSearch.search(req, res)
-  });
+  })
 
   app.get("/latest/imagesearch", function (req, res) {
     ImageSearch.getSearchHistory(req, res)
-  });
+  })
 }
 
 module.exports = routes
