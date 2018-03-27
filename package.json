@@ -18,6 +18,7 @@
   "homepage": "https://github.com/rclong1221/FCC-Image-Search#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "google-search": "0.0.5",
     "mongoose": "^5.0.11"
   }
 }

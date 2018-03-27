@@ -8,7 +8,7 @@ var routes = function (app) {
     ImageSearch.search(req, res)
   });
 
-  app.get("/searchhistory", function (req, res) {
+  app.get("/latest/imagesearch", function (req, res) {
     ImageSearch.getSearchHistory(req, res)
   });
 }
