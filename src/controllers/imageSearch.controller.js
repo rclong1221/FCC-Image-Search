@@ -8,7 +8,14 @@ class ImageSearch {
   static saveSearch(q) {
     let data = new Image({query: q})
     data.save(function (err) {
-      if (err) res.send('Error saving to database')
+      if (err) console.error(err)
+    })
+  }
+  static getSearches() {
+    Image.find(function(err, data){
+      if (err) console.error('Error querying database')
+      console.log(data)
+      if (data) return data
     })
   }
   static search(req, res) {
@@ -45,7 +52,8 @@ class ImageSearch {
     });
   }
   static getSearchHistory(req, res) {
-    return res.send(q);
+    // return res.send(q);
+    res.json(this.getSearches())
   }
 }
 
