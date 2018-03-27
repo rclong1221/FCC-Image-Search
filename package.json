@@ -1,0 +1,23 @@
+{
+  "name": "fcc-image-search",
+  "version": "1.0.0",
+  "description": "FCC image search backend project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rclong1221/FCC-Image-Search.git"
+  },
+  "author": "R.C. Long",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rclong1221/FCC-Image-Search/issues"
+  },
+  "homepage": "https://github.com/rclong1221/FCC-Image-Search#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.0.11"
+  }
+}
