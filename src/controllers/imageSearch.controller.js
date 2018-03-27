@@ -11,11 +11,19 @@ class ImageSearch {
       if (err) console.error(err)
     })
   }
-  static getSearches() {
+  static getSearches(res) {
     Image.find(function(err, data){
-      if (err) console.error('Error querying database')
-      console.log(data)
-      if (data) return data
+      if (err) console.error(err)
+      else {
+        let d = []
+        data.forEach((item) => {
+          d.push({
+            "term": item.query,
+            "when": item.createdAt
+          })
+        })
+        res.json(d)
+      }
     })
   }
   static search(req, res) {
@@ -53,7 +61,7 @@ class ImageSearch {
   }
   static getSearchHistory(req, res) {
     // return res.send(q);
-    res.json(this.getSearches())
+    this.getSearches(res)
   }
 }
 
