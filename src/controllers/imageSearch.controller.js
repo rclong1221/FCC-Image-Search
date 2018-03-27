@@ -35,7 +35,7 @@ class ImageSearch {
       searchType: "image",
       start: 1,
     }, function(error, response) {
-      if (error) return res.send("Search error");
+      if (error) res.send("Search error");
       else {
         let i = [];
         response.items.forEach((item) => {
@@ -47,7 +47,7 @@ class ImageSearch {
           })
         })
 
-        return res.send(i);
+        res.send(i);
       }
     });
   }
