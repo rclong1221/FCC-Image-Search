@@ -2,8 +2,6 @@ const googleSearch = require('../../lib/search.js')
 
 const Image = require('../models/imageSearch.model.js')
 
-var q = []
-
 class ImageSearch {
   static saveSearch(q) {
     let data = new Image({query: q})
